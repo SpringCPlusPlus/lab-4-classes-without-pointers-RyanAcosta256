@@ -11,10 +11,12 @@ using namespace std;
 
     // Member function to calculate distance to another Point
     double Point::distanceTo(const Point& other) const{
-        double top = other.y - y;
-        double down = other.x -x;
-        
-        return top/down;
+        //formated this way for better readability 
+        return  
+            sqrt( 
+                    pow(other.x-x, 2 ) +
+                    pow(other.y -y, 2) 
+                );
     }
 
     //Member function to print the point.
